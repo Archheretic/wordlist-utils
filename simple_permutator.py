@@ -11,8 +11,23 @@ def permute(xs, low=0):
             xs[low], xs[i] = xs[i], xs[low]
 
 out = open("permutations.txt", "w+")
+
+for p in permute(["Henry", "1975"]):
+    out.write("".join(p) + '\n')
+
 for p in permute(["Henry", "June", " ", "10.", "1975"]):
     out.write("".join(p) + '\n')
+
+for p in permute(["Henry", "10.", "1975"]):
+    out.write("".join(p) + '\n')
+
+for p in permute(["Henry", " ", "10.", "1975"]):
+    out.write("".join(p) + '\n')
+
+for p in permute(["Henry", " ", "10", "1975"]):
+    out.write("".join(p) + '\n')
+
+
 
 for p in permute(["Henry", "June", "10.", "1975"]):
     out.write("".join(p) + '\n')
